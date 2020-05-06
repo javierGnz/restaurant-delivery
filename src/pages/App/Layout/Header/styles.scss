@@ -1,0 +1,19 @@
+.navbar {  
+
+  &__actions {
+    position: absolute;
+    right: 0;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.navbar-brand img {
+  max-height: 70px;
+
+  @media (min-width: 768px) {
+    max-height: 100px;
+  }
+}

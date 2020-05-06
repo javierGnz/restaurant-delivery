@@ -1,0 +1,10 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "LaserMetal";
+  src: url("LaserMetal.eot");
+  src: url("LaserMetal.eot?#iefix") format("embedded-opentype"),
+    url("LaserMetal.woff2") format("woff2"),
+    url("LaserMetal.woff") format("woff"),
+    url("LaserMetal.ttf") format("truetype");
+}

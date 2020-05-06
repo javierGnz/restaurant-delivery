@@ -1,0 +1,13 @@
+@import "/fonts/din/stylesheet.css";
+@import "/fonts/din-cond/stylesheet.css";
+@import "/fonts/laser-metal/stylesheet.css";
+
+body {
+  font-family: "DINPro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}

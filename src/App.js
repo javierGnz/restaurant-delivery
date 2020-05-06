@@ -1,20 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./App.scss";
 import Layout from "./pages/App/Layout";
 import HomePage from "./pages/App/HomePage";
-import "./App.scss";
 
 function App() {
   return (
+    <Router>
     <Layout>
       <h1>inside layout</h1>
-      <Router>
+      
         <Link to="/home">Home</Link>
         <Switch>
           <Route path="/home" component={HomePage} />
         </Switch>
-      </Router>
     </Layout>
+    </Router>
   );
 }
 

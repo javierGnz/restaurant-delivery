@@ -1,0 +1,23 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "DINPro-Cond";
+  src: url("DINPro-Cond.eot");
+  src: url("DINPro-Cond.eot?#iefix") format("embedded-opentype"),
+    url("DINPro-Cond.woff2") format("woff2"),
+    url("DINPro-Cond.woff") format("woff"),
+    url("DINPro-Cond.ttf") format("truetype"),
+    url("DINPro-Cond.svg#DINPro-Cond") format("svg");
+}
+
+@font-face {
+  font-weight: bold;
+  font-style: normal;
+  font-family: "DINPro-Cond";
+  src: url("DINPro-CondBold.eot");
+  src: url("DINPro-CondBold.eot?#iefix") format("embedded-opentype"),
+    url("DINPro-CondBold.woff2") format("woff2"),
+    url("DINPro-CondBold.woff") format("woff"),
+    url("DINPro-CondBold.ttf") format("truetype"),
+    url("DINPro-CondBold.svg#DINPro-CondBold") format("svg");
+}
