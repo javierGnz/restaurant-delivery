@@ -1,8 +1,8 @@
+@import "../../assets/scss/variables";
+
 $count: 10;
 $time: 3;
 $size: 100;
-$white: #ffffff;
-$black: #212529;
 
 .holder {
   position: absolute;
@@ -10,6 +10,7 @@ $black: #212529;
   right: 0px;
   bottom: 0px;
   left: 0px;
+  z-index: 9999;
   width: 100%;
   height: 100%;
   background-color: $white;

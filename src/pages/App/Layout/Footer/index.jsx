@@ -10,22 +10,22 @@ export class Footer extends Component {
           <div className="row">
             <div className="col-lg-3 col-md-6">
               <div className="footer__logo">
-                <img src="" alt="Logo"/>
+                <img src="https://tofuu.getjusto.com/orioneat-prod-resized/299LL3FPGg6NF4wsh-200-undefined.webp" alt="Logo"/>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <h5>Conócenos</h5>
               <ul className="list-unstyled">
-                <li><a className="footer__link" target="blank" href="#">Zona</a></li>
-                <li><a className="footer__link" target="blank" href="#">Contacto</a></li>
+                <li><a className="footer__link" target="blank" href="#top">Zona</a></li>
+                <li><a className="footer__link" target="blank" href="#top">Contacto</a></li>
               </ul>
             </div>
             <div className="col-lg-3 col-md-6">
               <h5>Redes sociales</h5>
               <ul className="list-unstyled">
-                <li><a className="footer__link" target="blank" href="#">Instagram</a></li>
-                <li><a className="footer__link" target="blank" href="#">Facebook</a></li>
-                <li><a className="footer__link" target="blank" href="#">Twitter</a></li>
+                <li><a className="footer__link" target="blank" href="#top">Instagram</a></li>
+                <li><a className="footer__link" target="blank" href="#top">Facebook</a></li>
+                <li><a className="footer__link" target="blank" href="#top">Twitter</a></li>
               </ul>
             </div>
             <div className="col-lg-3 col-md-6">

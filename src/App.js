@@ -3,18 +3,27 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.scss";
 import Layout from "./pages/App/Layout";
 import HomePage from "./pages/App/HomePage";
+import Checkout from "./pages/App/Checkout";
+import NotFound from "./pages/App/NotFound";
+import Orders from "./pages/App/Orders";
+import Reserve from "./pages/App/Reserve";
+import Settings from "./pages/App/Settings";
+import Track from "./pages/App/Track";
 
 function App() {
   return (
     <Router>
-    <Layout>
-      <h1>inside layout</h1>
-      
-        <Link to="/home">Home</Link>
+      <Layout>
         <Switch>
-          <Route path="/home" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/reservar" component={Reserve} />
+          <Route path="/pedidos" component={Orders} />
+          <Route path="/checkout" component={Checkout} />
+          <Route path="/track" component={Track} />
+          <Route component={NotFound} />
         </Switch>
-    </Layout>
+      </Layout>
     </Router>
   );
 }

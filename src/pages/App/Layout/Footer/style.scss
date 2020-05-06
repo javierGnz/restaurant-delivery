@@ -1,6 +1,8 @@
+@import "../../../../assets/scss/variables";
+
 .footer {
   padding: 40px 0;
-  background-color: #eee;
+  background-color: darken($grey, 2.5%);
 
   h5 {
     font-weight: 700;
@@ -31,10 +33,10 @@
   }
 
   &__link {
-    color: #212529;
+    color: $black;
 
     &:hover {
-      color: rgba(#212529, 0.4);
+      color: rgba($black, 0.4);
       text-decoration: none;
     }
   }
