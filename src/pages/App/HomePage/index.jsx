@@ -1,19 +1,208 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Carousel from "../../../components/Carousel";
+import "./styles.scss";
 
-const HomePage = () => {
-  return (
-    <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/settings">Settings</Link></li>
-        <li><Link to="/reservar">reservar</Link></li>
-        <li><Link to="/pedidos">pedidos</Link></li>
-        <li><Link to="/checkout">checkout</Link></li>
-        <li><Link to="/track">track</Link></li>
-      </ul>
-    </div>
-  )
+export class HomePage extends Component {
+  render() {
+    return (
+      <>
+        <Carousel />
+        <div className="py-5">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-5 offset-sm-1">
+                <img
+                  className="img-fluid mx-auto"
+                  src="https://s3.amazonaws.com/orion-eat-app-files/orioneat-prod/2Y5p66TFZnkPwonWr-9años%20Logo.png"
+                  alt="IMG"
+                />
+              </div>
+              <div className="col-sm-5">
+                <h1 className="subtitle text-center mb-5">Title</h1>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore libero cupiditate nesciunt adipisci laborum corporis
+                  est commodi, cumque rerum non sapiente deserunt animi corrupti
+                  sed odio ex magni nulla voluptatem.
+                </p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore libero cupiditate nesciunt adipisci laborum corporis
+                  est commodi, cumque rerum non sapiente deserunt animi corrupti
+                  sed odio ex magni nulla voluptatem.
+                </p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore libero cupiditate nesciunt adipisci laborum corporis
+                </p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore libero cupiditate nesciunt adipisci laborum corporis
+                  est commodi, cumque rerum non sapiente deserunt animi corrupti
+                  sed odio ex magni nulla voluptatem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="start-ordening"
+          style={{
+            backgroundImage:
+              "url(https://tofuu.getjusto.com/orioneat-prod-resized/8RghfCjsRp2JwZYQ2-1400-2800.webp)",
+          }}
+        >
+          <div className="start-ordening__content">
+            <h1>Title</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores labore alias ab deleniti cupiditate quasi quo, iste
+              eveniet delectus fugit placeat mollitia, quod saepe nostrum atque
+              nesciunt eos repellat tenetur.
+            </p>
+          </div>
+        </div>
+        <div className="pt-5 pb-3">
+          <div className="container">
+            <h1 className="subtitle text-center mb-5">Nuestra carta</h1>
+            <div className="row justify-content-center">
+              <div className="col-lg-4 col-sm-6">
+                <a href="#top" className="box-info">
+                  <img
+                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
+                    alt="TOP"
+                  />
+                  <h4 className="box-info__title">Menu</h4>
+                </a>
+              </div>
+              <div className="col-lg-4 col-sm-6">
+                <a href="#top" className="box-info">
+                  <img
+                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
+                    alt="TOP"
+                  />
+                  <h4 className="box-info__title">Menu</h4>
+                </a>
+              </div>
+              <div className="col-lg-4 col-sm-6">
+                <a href="#top" className="box-info">
+                  <img
+                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
+                    alt="TOP"
+                  />
+                  <h4 className="box-info__title">Menu</h4>
+                </a>
+              </div>
+              <div className="col-lg-4 col-sm-6">
+                <a href="#top" className="box-info">
+                  <img
+                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
+                    alt="TOP"
+                  />
+                  <h4 className="box-info__title">Menu</h4>
+                </a>
+              </div>
+              <div className="col-lg-4 col-sm-6">
+                <a href="#top" className="box-info">
+                  <img
+                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
+                    alt="TOP"
+                  />
+                  <h4 className="box-info__title">Menu</h4>
+                </a>
+              </div>
+              <div className="col-lg-4 col-sm-6">
+                <a href="#top" className="box-info">
+                  <img
+                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
+                    alt="TOP"
+                  />
+                  <h4 className="box-info__title">Menu</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="py-5">
+          <div className="container">
+            <h1 className="subtitle mb-5 text-center">Sucursales</h1>
+            <div className="row justify-content-center">
+              <div className="col-sm-3">
+                <div className="card">
+                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
+                  <div className="card-body">
+                    <h5 className="card-title">Las Condes</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-3">
+                <div className="card">
+                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
+                  <div className="card-body">
+                    <h5 className="card-title">Las Condes</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-3">
+                <div className="card">
+                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
+                  <div className="card-body">
+                    <h5 className="card-title">Las Condes</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-3">
+                <div className="card">
+                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
+                  <div className="card-body">
+                    <h5 className="card-title">Las Condes</h5>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/settings">Settings</Link>
+          </li>
+          <li>
+            <Link to="/reservar">reservar</Link>
+          </li>
+          <li>
+            <Link to="/pedidos">pedidos</Link>
+          </li>
+          <li>
+            <Link to="/checkout">checkout</Link>
+          </li>
+          <li>
+            <Link to="/track">track</Link>
+          </li>
+        </ul>
+      </>
+    );
+  }
 }
 
-export default HomePage
+export default HomePage;
