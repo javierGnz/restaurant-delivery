@@ -1,0 +1,46 @@
+@import "../../assets/scss/variables";
+
+.category {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(50, 50, 93, 0.1);
+  cursor: pointer;
+
+  @media (min-width: 1200px) {
+    min-height: 250px;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    position: absolute;
+    top: calc(50% - 0.5rem);
+    left: 50%;
+    color: $white;
+    font-size: 2.75rem;
+    font-family: "LaserMetal", sans-serif;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+    transform: translate(-50%, -50%);
+
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .category__name {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+}

@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "../../../components/Carousel";
+import Category from "../../../components/Category";
+import Stores from "../../../components/Stores";
 import "./styles.scss";
+
+const nuestraCarta = [
+  { id: 1, img: "https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp", name: "Entradas" },
+  { id: 2, img: "https://tofuu.getjusto.com/orioneat-prod-resized/dXrxW8wgLGKrPwd85-500-700.webp", name: "Fondos" },
+  { id: 3, img: "https://tofuu.getjusto.com/orioneat-prod-resized/7Sg4zGt2PzLMKrebK-500-700.webp", name: "Platos" }
+];
 
 export class HomePage extends Component {
   render() {
@@ -67,60 +75,7 @@ export class HomePage extends Component {
           <div className="container">
             <h1 className="subtitle text-center mb-5">Nuestra carta</h1>
             <div className="row justify-content-center">
-              <div className="col-lg-4 col-sm-6">
-                <a href="#top" className="box-info">
-                  <img
-                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
-                    alt="TOP"
-                  />
-                  <h4 className="box-info__title">Menu</h4>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a href="#top" className="box-info">
-                  <img
-                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
-                    alt="TOP"
-                  />
-                  <h4 className="box-info__title">Menu</h4>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a href="#top" className="box-info">
-                  <img
-                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
-                    alt="TOP"
-                  />
-                  <h4 className="box-info__title">Menu</h4>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a href="#top" className="box-info">
-                  <img
-                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
-                    alt="TOP"
-                  />
-                  <h4 className="box-info__title">Menu</h4>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a href="#top" className="box-info">
-                  <img
-                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
-                    alt="TOP"
-                  />
-                  <h4 className="box-info__title">Menu</h4>
-                </a>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <a href="#top" className="box-info">
-                  <img
-                    src="https://tofuu.getjusto.com/orioneat-prod-resized/nRrsAavLynLbzmpAh-500-700.webp"
-                    alt="TOP"
-                  />
-                  <h4 className="box-info__title">Menu</h4>
-                </a>
-              </div>
+              <Category categories={nuestraCarta} />
             </div>
           </div>
         </div>
@@ -128,54 +83,7 @@ export class HomePage extends Component {
           <div className="container">
             <h1 className="subtitle mb-5 text-center">Sucursales</h1>
             <div className="row justify-content-center">
-              <div className="col-sm-3">
-                <div className="card">
-                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
-                  <div className="card-body">
-                    <h5 className="card-title">Las Condes</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-3">
-                <div className="card">
-                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
-                  <div className="card-body">
-                    <h5 className="card-title">Las Condes</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-3">
-                <div className="card">
-                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
-                  <div className="card-body">
-                    <h5 className="card-title">Las Condes</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-3">
-                <div className="card">
-                  <img src="https://tofuu.getjusto.com/orioneat-prod-resized/caxYCaeTsEmAS2yZv-300-500.webp" className="card-img-top" alt="sss" />
-                  <div className="card-body">
-                    <h5 className="card-title">Las Condes</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Stores />
             </div>
           </div>
         </div>
