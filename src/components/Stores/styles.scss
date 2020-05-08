@@ -1,0 +1,42 @@
+@import '~rc-tooltip/assets/bootstrap.css';
+@import "../../assets/scss/variables";
+
+.rc-tooltip {
+  font-size: 14px;
+}
+
+.rc-tooltip-inner {
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(50, 50, 93, 0.1);
+  margin-bottom: 2rem;
+
+  a {
+    color: $black;
+
+    &:hover {
+      text-decoration: none;
+      color: rgba($black, 0.4);
+    }
+  }
+
+  .list-unstyled li:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &__link span {
+    cursor: pointer; 
+    transition: all 0.45s cubic-bezier(0.33, 1, 0.68, 1);
+    
+    &:hover {
+      color: rgba($black, 0.4);
+    }
+  }
+}
+
+.card-title {
+  font-weight: 700;
+}
