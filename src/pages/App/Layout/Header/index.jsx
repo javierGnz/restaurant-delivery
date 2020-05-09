@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import { CSSTransition } from "react-transition-group";
-import { MdOpenInBrowser, MdSettings, MdShopTwo, MdExitToApp, MdStoreMallDirectory, MdAddCircleOutline } from "react-icons/md";
+import {
+  MdOpenInBrowser,
+  MdSettings,
+  MdShopTwo,
+  MdExitToApp,
+  MdStoreMallDirectory,
+  MdAddCircleOutline,
+  MdKeyboardArrowDown
+} from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 
@@ -9,13 +17,21 @@ export class Header extends Component {
     super();
     this.state = {
       openMenu: false,
+      isLogin: false,
     };
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.toggleLogin = this.toggleLogin.bind(this);
   }
 
   toggleMenu() {
     this.setState({
-      openMenu: !this.state.openMenu,
+      openMenu: !this.state.openMenu
+    });
+  }
+
+  toggleLogin() {
+    this.setState({
+      isLogin: !this.state.isLogin
     });
   }
 
@@ -23,13 +39,23 @@ export class Header extends Component {
     return (
       <div className="navbar">
         <Link className="navbar-brand" to="/">
-          <img src="https://tofuu.getjusto.com/orioneat-prod-resized/299LL3FPGg6NF4wsh-200-undefined.webp" alt="Logo" />
+          <img
+            src="https://tofuu.getjusto.com/orioneat-prod-resized/299LL3FPGg6NF4wsh-200-undefined.webp"
+            alt="Logo"
+          />
         </Link>
         <div className="navbar__actions">
-          <button className="btn" type="button" onClick={this.toggleMenu}>
-            <span>Entrar</span>
-            <MdOpenInBrowser size={20} />
-          </button>
+          {this.state.isLogin ? (
+            <button className="btn" onClick={this.toggleMenu} style={{backgroundColor: '#dc2232', color: '#fff'}}>
+              <span>Username</span>
+              <MdKeyboardArrowDown style={{transform: 'scale(1.2) translateY(2px)'}} />
+            </button>
+          ) : (
+            <button className="btn" onClick={this.toggleLogin} style={{backgroundColor: '#dc2232', color: '#fff'}}>
+              <span>Entrar</span>
+              <MdOpenInBrowser />
+            </button>
+          )}
           <CSSTransition
             in={this.state.openMenu}
             timeout={300}

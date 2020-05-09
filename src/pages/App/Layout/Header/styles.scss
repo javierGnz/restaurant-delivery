@@ -6,19 +6,29 @@
     right: 0;
 
     .btn {
-      background-color: red;
-      color: $white;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      transform: translateX(4px);
+      display: inline-flex;
+      align-items: center;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
 
-      span {
-        display: inline-block;
-        margin-right: 0.5rem;
-        font-weight: 700;
+      @media (min-width: 768px) {
         font-size: 1.14rem;
       }
 
-      &:hover {
+      span {
+        display: inline-block;
+        margin-right: 0.25rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      &:hover, &:focus {
         box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
           0 3px 6px rgba(0, 0, 0, 0.1);
+        transform: translateX(0);
       }
     }
   }
