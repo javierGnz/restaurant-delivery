@@ -3,8 +3,8 @@ import "./style.scss";
 
 const Loading = () => {
   return (
-    <div class="holder">
-      <div class="preloader">
+    <div className="holder">
+      <div className="preloader">
         <div />
         <div />
         <div />

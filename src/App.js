@@ -5,6 +5,7 @@ import Layout from "./pages/App/Layout";
 import HomePage from "./pages/App/HomePage";
 import Checkout from "./pages/App/Checkout";
 import NotFound from "./pages/App/NotFound";
+import Order from "./pages/App/Order";
 import Orders from "./pages/App/Orders";
 import Reserve from "./pages/App/Reserve";
 import Settings from "./pages/App/Settings";
@@ -17,8 +18,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/settings" component={Settings} />
-          <Route path="/reservar" component={Reserve} />
+          <Route path="/pedir" component={Order} />
           <Route path="/pedidos" component={Orders} />
+          <Route path="/reservar" component={Reserve} />
           <Route path="/checkout" component={Checkout} />
           <Route path="/track" component={Track} />
           <Route component={NotFound} />

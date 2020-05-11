@@ -33,7 +33,7 @@ export class HomePage extends Component {
         <div className="py-5">
           <div className="container">
             <div className="row">
-              <div className="col-sm-5 offset-sm-1">
+              <div className="col-sm-5 offset-sm-1 col-8 offset-2">
                 <img
                   className="img-fluid mx-auto"
                   src="https://s3.amazonaws.com/orion-eat-app-files/orioneat-prod/2Y5p66TFZnkPwonWr-9años%20Logo.png"
@@ -93,6 +93,7 @@ export class HomePage extends Component {
             </div>
           </div>
         </div>
+        {/* TODO: delete this */}
         <hr />
         <ul>
           <li>
@@ -100,6 +101,9 @@ export class HomePage extends Component {
           </li>
           <li>
             <Link to="/settings">Settings</Link>
+          </li>
+          <li>
+            <Link to="/pedir">pedir</Link>
           </li>
           <li>
             <Link to="/reservar">reservar</Link>

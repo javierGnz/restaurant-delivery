@@ -66,19 +66,19 @@ export class Header extends Component {
             <div className="menu">
               <ul className="menu__list">
                 <li className="menu__item">
-                  <Link className="menu__link" to="/">
+                  <Link className="menu__link" to="/settings">
                     <h6>Name</h6>
                     <small>email</small>
                   </Link>
                 </li>
                 <li className="menu__item">
-                  <Link className="menu__link" to="/">
+                  <Link className="menu__link" to="/pedidos">
                     <MdShopTwo size={20} />
                     <span>Mis pedidos</span>
                   </Link>
                 </li>
                 <li className="menu__item">
-                  <Link className="menu__link" to="/">
+                  <Link className="menu__link" to="/settings">
                     <MdSettings size={20} />
                     <span>Mi cuenta</span>
                   </Link>
