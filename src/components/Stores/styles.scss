@@ -1,12 +1,6 @@
-@import '~rc-tooltip/assets/bootstrap.css';
 @import "../../assets/scss/variables";
 
-.rc-tooltip {
-  font-size: 14px;
-}
-
-.rc-tooltip-inner {
-  border-radius: 4px;
+.tooltip-inner {
   padding: 0.5rem 1rem;
 }
 
