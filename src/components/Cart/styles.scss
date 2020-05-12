@@ -4,6 +4,40 @@
   position: sticky;
   top: 0;
   border-radius: 4px;
-  padding: 0.75rem;
   box-shadow: $general-shadow;
+
+  &__title {
+    padding: 1rem;
+    font-weight: 700;
+    border-bottom: 1px solid $grey;
+    margin-bottom: 0;
+  }
+
+  &__empty {
+    padding: 1rem;
+    color: rgba($black, 0.5);
+    text-align: center;
+  }
+
+  &__container {
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  &__item {
+    padding: 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey;
+    }
+  }
+
+  &__product {
+    display: flex;
+  }
+
+  &__summary {
+    border-top: 1px solid $grey;
+    padding: 1rem;
+  }
 }

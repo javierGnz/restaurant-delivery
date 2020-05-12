@@ -1,3 +1,5 @@
+@import "./variables";
+
 .subtitle {
   font-family: "DINPro-Cond", sans-serif;
   font-weight: 700;
@@ -11,5 +13,10 @@
   &__title {
     font-weight: 700;
     font-size: 1.5rem;
+
+    &--underline {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $grey;
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 
-const Product = ({ title, description, price, img}) => {
+const Product = ({ title, description, price, img }) => {
   return (
     <div className="card card--product">
       <div className="card-body card-body--product">
@@ -17,10 +17,7 @@ const Product = ({ title, description, price, img}) => {
             </div>
           </div>
           <div className="product__img">
-            <img
-              src={img}
-              alt={title}
-            />
+            <img src={img} alt={title} />
           </div>
         </div>
       </div>
