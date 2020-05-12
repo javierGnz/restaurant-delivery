@@ -1,0 +1,9 @@
+@import "../../assets/scss/variables";
+
+.cart {
+  position: sticky;
+  top: 0;
+  border-radius: 4px;
+  padding: 0.75rem;
+  box-shadow: $general-shadow;
+}

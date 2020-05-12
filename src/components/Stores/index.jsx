@@ -13,7 +13,7 @@ const Stores = ({ stores }) => {
       {stores.map(({ id, title, img, tel, address }) => {
         return (
           <div key={id} className="col-lg-3 col-md-6">
-            <div className="card">
+            <div className="card card--addresses">
               <img className="card-img-top" src={img} alt={title} />
               <div className="card-body">
                 <h5 className="card-title">{title}</h5>

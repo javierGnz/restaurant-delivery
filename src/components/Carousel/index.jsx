@@ -34,14 +34,13 @@ export class Carousel extends Component {
     return (
       <div className="slider-container">
         <Slider {...settings}>
-          <img
-            src="https://tofuu.getjusto.com/orioneat-prod-resized/EAaQXSju66wrzkWpv-x-2800.webp"
-            alt="ss"
-          />
-          <img
-            src="https://tofuu.getjusto.com/orioneat-prod-resized/EAaQXSju66wrzkWpv-x-2800.webp"
-            alt="ss"
-          />
+          {this.props.data.map(({ id, img, alt }) => {
+            return (
+              <div key={id}>
+                <img src={img} alt={alt} />
+              </div>
+            );
+          })}
         </Slider>
       </div>
     );

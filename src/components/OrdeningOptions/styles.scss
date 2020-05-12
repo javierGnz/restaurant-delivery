@@ -1,0 +1,52 @@
+@import "../../assets/scss/variables";
+
+.ordening-type {
+  border-radius: 4px;
+  
+  &__options {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+
+    .btn {
+      font-weight: 400;
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 33.333333%;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+  
+      span {
+        display: inline-block;
+        margin-top: 0.5rem;
+      }
+  
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__selection {
+    margin-bottom: 1rem;
+  }
+}
+
+.select-outline {
+  &__control {
+    background-color: transparent !important;
+    border-color: $white !important;
+  }
+
+  &__placeholder {
+    color: rgba($white, 0.4) !important;
+  }
+
+  &__option {
+    color: $black !important; 
+  }
+}

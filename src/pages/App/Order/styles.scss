@@ -1,14 +1,46 @@
+@import "../../../assets/scss/variables";
+
+.purchase {
+  .ordening-type {
+    padding: 0.75rem;
+    box-shadow: $general-shadow;
+    margin-bottom: 1.5rem;
+  }
+
+  .ordening-type__options {
+    
+    .btn {
+      font-size: 14px;
+      color: $black;
+    }
+  }
+
+  .select-outline {
+    &__control {
+      border-color: $grey !important;
+    }
+  
+    &__placeholder {
+      color: rgba($black, 0.4) !important;
+    }
+  
+    &__option {
+      color: $black !important; 
+    }
+  }
+}
+
 .products {
   position: relative;
+}
 
-  .search-bar {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    z-index: 10;
-    padding: 0 5px;
-    margin: 0 -5px 30px;
-    border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
-  }
+.search-bar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  padding: 0 5px;
+  margin: 0 -5px 30px;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
 }

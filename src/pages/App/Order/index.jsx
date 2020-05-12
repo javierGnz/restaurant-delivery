@@ -1,16 +1,40 @@
-import React, {useState} from "react";
-import { Modal, Button } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Modal } from "react-bootstrap";
 import Products from "./Products";
-import Ordening from '../../../components/Ordening';
+import OrdeningOptions from "../../../components/OrdeningOptions";
+import Cart from '../../../components/Cart';
+import ProductModal from "../../../components/ProductModal";
 import "./styles.scss";
 
-const products = [
-  { id: 1, title: "title"},
-  { id: 2, title: "food"},
-  { id: 3, title: "asian"},
-  { id: 4, title: "mexican"},
-  { id: 5, title: "france"},
-  { id: 6, title: "glace"},
+const data = [
+  { id: 1, title: "recomendados", products: [
+    { id: 1, title: "pasta", description: "Lorem ipsum dolor  adipisicing elit", price: "2000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "arroz", description: "Dolor sit amet consectetur adipisicing elit", price: "3000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
+  { id: 2, title: "food", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
+  { id: 2, title: "food", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
+  { id: 2, title: "food", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
+  { id: 2, title: "food", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
+  { id: 2, title: "food", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
+  { id: 2, title: "food", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
 ];
 
 const Order = () => {
@@ -20,44 +44,39 @@ const Order = () => {
   const handleShow = ({ id }) => {
     console.log(id);
     setShow(true);
-  }
+  };
 
   return (
     <div className="wrapper">
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-4 order-lg-last">
-            <Ordening />
-            <h4>mi pedido</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia itaque cum, enim ipsam porro autem sequi dolor incidunt id minima accusamus, voluptatem, mollitia iure quibusdam soluta quas reiciendis totam!</p>
+            <div className="purchase">
+              <OrdeningOptions />
+              <Cart />
+            </div>
           </div>
           <div className="col-12 col-lg-8">
-            <div className="products">
-            <div className="search-bar">
-              <p>Search bar</p>
-            </div>
-            {products.map(({ id, title }) => {
-              return(
-                <Products key={id} title={title} openModal={() => handleShow(id)} />
-              );
-            })}
+            <div className="categories">
+              <div className="search-bar">
+                <p>Search bar</p>
+              </div>
+              {data.map(({ id, title, products }) => {
+                return (
+                  <Products
+                    key={id}
+                    title={title}
+                    products={products}
+                    openModal={() => handleShow(id)}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
+      <Modal show={show} onHide={handleClose} centered size="lg">
+        <ProductModal />
       </Modal>
     </div>
   );
