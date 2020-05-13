@@ -1,10 +1,11 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import Tabs from "../../../components/Tabs";
-import Addresses from './Addresses';
+import Profile from './Profile';
 import Comunication from './Comunication';
 import Payment from './Payment';
-import Profile from './Profile';
+import Addresses from './Addresses';
+import Security from './Security';
 import "./styles.scss";
 
 const settingsURLs = [
@@ -26,6 +27,7 @@ const Settings = () => {
         <Route path="/settings/communication" component={Comunication} />
         <Route path="/settings/payment" component={Payment} />
         <Route path="/settings/addresses" component={Addresses} />
+        <Route path="/settings/security" component={Security} />
       </>
     </div>
   );

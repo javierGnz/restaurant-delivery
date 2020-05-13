@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./styles.scss";
 
 const Tabs = ({ tabs }) => {
@@ -10,7 +10,7 @@ const Tabs = ({ tabs }) => {
             {tabs.map(({ id, name, path }) => {
               return (
                 <li key={id} className="tabs__item">
-                  <Link className="tabs__link" to={path}>{name}</Link>
+                  <NavLink exact className="tabs__link" to={path}>{name}</NavLink>
                 </li>
               );
             })}

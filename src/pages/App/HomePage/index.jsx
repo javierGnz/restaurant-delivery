@@ -89,25 +89,28 @@ export class HomePage extends Component {
         <hr />
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">home</Link>
           </li>
           <li>
-            <Link to="/settings">Settings</Link>
-          </li>
-          <li>
-            <Link to="/pedir">pedir</Link>
-          </li>
-          <li>
-            <Link to="/reservar">reservar</Link>
+            <Link to="/settings">settings</Link>
           </li>
           <li>
             <Link to="/pedidos">pedidos</Link>
+          </li>
+          <li>
+            <Link to="/pedir">pedir</Link>
           </li>
           <li>
             <Link to="/checkout">checkout</Link>
           </li>
           <li>
             <Link to="/track">track</Link>
+          </li>
+          <li>
+            <Link to="/reservar">reservar</Link>
+          </li>
+          <li>
+            <Link to="/despacho">despacho</Link>
           </li>
         </ul>
       </>

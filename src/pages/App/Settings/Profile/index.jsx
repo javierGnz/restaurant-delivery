@@ -1,25 +1,33 @@
-import React, { Component } from 'react'
-import Section from '../../../../components/Section';
+import React, { Component } from "react";
+import Section from "../../../../components/Section";
 
 export class Profile extends Component {
   render() {
     return (
-      <Section
-        title="Perfil"
-        description="Lorem ipsum dolor"
-      >
+      <Section title="Perfil" description="Actualiza tu información personal">
+        {/* TODO: implement a form */}
         <div className="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <label htmlFor="name">Nombre</label>
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            placeholder="Tu nombre"
+          />
         </div>
         <div className="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" className="form-control" id="exampleInputPassword1" />
+          <label htmlFor="last-name">Apellido</label>
+          <input
+            type="text"
+            className="form-control"
+            id="last-name"
+            placeholder="Tu apellido"
+          />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button className="btn btn--red">Guardar</button>
       </Section>
-    )
+    );
   }
 }
 
-export default Profile
+export default Profile;

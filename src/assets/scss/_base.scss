@@ -8,7 +8,18 @@ a, .btn {
   transition: all 0.45s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
+.btn {
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(50, 50, 93, 0.1);
+}
+
 .card {
   border: none;
   box-shadow: 0 2px 4px rgba(50, 50, 93, 0.1);
+}
+
+.btn-toolbar {
+  .btn:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 }

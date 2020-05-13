@@ -1,6 +1,8 @@
 @import "../../../../assets/scss/variables";
 
 .navbar {
+  overflow: hidden;
+  
   &__actions {
     position: absolute;
     right: 0;
@@ -74,7 +76,7 @@
     }
 
     &:last-child {
-      border-top: 1px solid darken($grey, 2.5%);
+      border-top: 1px solid $grey;
   
       .menu__link {
         display: flex;
