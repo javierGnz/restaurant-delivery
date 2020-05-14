@@ -1,0 +1,72 @@
+@import "../../assets/scss/variables";
+
+.search-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-right: -15px;
+  margin-left: -15px;
+  background-color: $white;
+  box-shadow: $general-shadow;
+  margin-bottom: 1rem;
+
+  &__container {
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    padding: 0 0.75rem;
+    border-radius: 4px;
+  }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    line-height: 1;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: 0.75rem 0;
+    border: none;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__categories {
+    overflow: auto;
+    flex-grow: 1;
+    padding: 0.75rem 0;
+  }
+
+  &__item {
+    color: rgba($black, 0.5);
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    &:hover {
+      color: rgba($black, 0.75);
+      text-decoration: none;
+    }
+
+    &.active {
+      color: $black;
+    }
+  }
+}

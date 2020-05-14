@@ -4,6 +4,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 a, .btn {
   transition: all 0.45s cubic-bezier(0.33, 1, 0.68, 1);
 }
