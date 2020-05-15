@@ -1,0 +1,41 @@
+@import "../../assets/scss/variables";
+
+.cart-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $grey;
+  }
+
+  &__product {
+    display: flex;
+    align-self: center;
+
+    .custom-select {
+      max-width: 65px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__description {
+    flex-grow: 1;
+    margin-right: 0.5rem;
+  }
+
+  &__price {
+    .sale {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__delete {
+    color: $red;
+    cursor: pointer;
+  }
+}

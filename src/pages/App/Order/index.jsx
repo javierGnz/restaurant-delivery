@@ -4,7 +4,7 @@ import Categories from "./Categories";
 import OrdeningOptions from "../../../components/OrdeningOptions";
 import ProductModal from "../../../components/ProductModal";
 import SearchBar from "../../../components/SearchBar";
-import Cart from "../../../components/Cart";
+import Cart from "./Cart";
 import "./styles.scss";
 
 const data = [
@@ -15,7 +15,15 @@ const data = [
   { id: 2, title: "Postres", products: [
     { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
     { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
-  ]}
+  ]},
+  { id: 2, title: "Postres", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
+  { id: 2, title: "Postres", products: [
+    { id: 1, title: "porotos", description: "Consectetur adipisicing elit", price: "4000", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" },
+    { id: 2, title: "bistec", description: "Lorem amet consectetur adipisicing elit", price: "5600", img: "https://tofuu.getjusto.com/orioneat-prod-resized/3fcHMCSSpkzPGjsNQ-320-320.webp" }
+  ]},
 ];
 
 const Order = () => {
@@ -37,6 +45,7 @@ const Order = () => {
                 <OrdeningOptions />
               </div>
               <div className="purchase__order">
+                <h1 className="wrapper__title wrapper__title--underline">Mi pedido</h1>
                 <Cart />
               </div>
             </div>
@@ -58,7 +67,7 @@ const Order = () => {
           </div>
         </div>
       </div>
-      <Modal show={show} onHide={handleClose} centered size="lg">
+      <Modal show={show} onHide={handleClose} centered size="xl">
         <ProductModal />
       </Modal>
     </div>

@@ -1,0 +1,62 @@
+@import "./variables";
+
+.wrapper {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    &--underline {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $grey;
+    }
+  }
+}
+
+.cart-wrapper {
+  max-height: 400px;
+  overflow: auto;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $grey;
+}
+
+.btn--white {
+  background-color: $white;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    background-color: darken($white, 2%);
+    color: $black;
+  }
+}
+
+.btn--red {
+  background-color: $red;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: darken($red, 2%);
+    color: $white;
+  }
+}
+
+.btn--none {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.modal-xl {
+  
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    max-width: 950px;
+  }
+}

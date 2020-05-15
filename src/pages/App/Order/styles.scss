@@ -2,35 +2,54 @@
 
 .purchase {
   height: 100%;
+  margin-bottom: 2rem;
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+  }
 
   &__type {
     margin-bottom: 1.5rem;
+
+    .ordening-type {
+      padding: 1rem;
+      box-shadow: $general-shadow;
+    }
+
+    .ordening-type__options {
+      .btn {
+        color: $black;
+        font-size: 14px;
+      }
+    }
+
+    .select-outline {
+      &__control {
+        border-color: $grey !important;
+      }
+
+      &__placeholder {
+        color: rgba($black, 0.4) !important;
+      }
+
+      &__option {
+        color: $black !important;
+      }
+    }
   }
-  .ordening-type {
-    padding: 1rem;
+
+  &__order {
+    border-radius: 4px;
     box-shadow: $general-shadow;
-    
-  }
 
-  .ordening-type__options {
-    
-    .btn {
-      font-size: 14px;
-      color: $black;
+    @media (min-width: 992px) {
+      position: sticky;
+      top: 0;
     }
-  }
 
-  .select-outline {
-    &__control {
-      border-color: $grey !important;
-    }
-  
-    &__placeholder {
-      color: rgba($black, 0.4) !important;
-    }
-  
-    &__option {
-      color: $black !important; 
+    .wrapper__title {
+      padding: 1rem;
+      margin-bottom: 0;
     }
   }
 }

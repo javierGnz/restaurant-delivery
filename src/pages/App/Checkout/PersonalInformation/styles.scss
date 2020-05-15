@@ -1,0 +1,11 @@
+@import "../../../../assets/scss/variables";
+
+.personal-information {
+  margin-bottom: 2rem;
+
+  &__item {
+    &:last-child {
+      margin-top: 0.5rem;
+    }
+  }
+}

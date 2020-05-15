@@ -1,9 +1,13 @@
 import React from "react";
 import Select from "react-select";
 import { Form } from "react-bootstrap";
+import { MdHealing } from "react-icons/md";
 import Product from "../../../components/Product";
-import Cart from '../../../components/Cart';
+import PersonalInformation from "./PersonalInformation";
+import CartItem from "../../../components/CartItem";
+import Summary from "../../../components/Summary";
 import "./styles.scss";
+import MessageCard from "../../../components/MessageCard";
 
 const data = [
   {
@@ -45,9 +49,7 @@ const Checkout = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1 className="wrapper__title wrapper__title--underline">
-              ¿Quieres agregar algo más?
-            </h1>
+            <h1 className="wrapper__title">¿Quieres agregar algo más?</h1>
             <div className="adding-more">
               {data.map(({ id, title, description, price, img }) => {
                 return (
@@ -66,23 +68,32 @@ const Checkout = () => {
             <h1 className="wrapper__title wrapper__title--underline">
               Entrega
             </h1>
-            <Select
-              className="select-outline"
-              classNamePrefix="select-outline"
-              options={options}
-            />
+            <Select options={options} />
           </div>
           <div className="col-lg-5 col-md-6">
             <h1 className="wrapper__title wrapper__title--underline">
-              Informacion personal
+              Información personal
             </h1>
-            <Form.Control type="text" placeholder="number" />
-              
-            <div className="wrapper__title wrapper__title--underline">
-              Resumen
-              <button>Agregar mas articulos</button>
+            <PersonalInformation />
+            <div className="wrapper__title wrapper__title--underline d-flex justify-content-between align-items-baseline">
+              <span>Resumen</span>
+              <button className="btn btn--none">Agregar más articulos</button>
             </div>
-            <Cart />
+            <div className="cart-wrapper">
+              <CartItem />
+            </div>
+            <Summary />
+            <MessageCard
+              icon={<MdHealing />}
+              title="Prevención ante Covid-19"
+              description="Prefiere usar medios de pago digitales para evitar"
+            />
+            <button className="btn btn--red btn-block">Confirmar pedido</button>
+            <div className="text-center mt-3">
+              <button className="btn btn--none">
+                Agregar un codigo de descuento
+              </button>
+            </div>
           </div>
         </div>
       </div>

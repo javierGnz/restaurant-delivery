@@ -12,7 +12,7 @@ const ProductModal = () => {
         <div className="row">
           <div className="col-md-6 px-0">
             <img
-              className="img-fluid"
+              className="product-modal__img"
               src="https://tofuu.getjusto.com/orioneat-prod-resized/GPEW96JypFBg69sFS-1200-1200.webp"
               alt=""
             />

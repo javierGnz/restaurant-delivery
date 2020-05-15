@@ -1,0 +1,14 @@
+@import "../../assets/scss/variables";
+
+.card--message {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .media-body {
+    font-size: 14px;
+
+    h6 {
+      font-weight: 600;
+    }
+  }
+}

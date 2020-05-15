@@ -1,0 +1,28 @@
+@import "../../../../assets/scss/variables";
+
+.cart {
+  .summary {
+    padding: 1rem;
+  }
+
+  &__empty {
+    padding: 1rem;
+    color: rgba($black, 0.5);
+    text-align: center;
+  }
+
+  &__list {
+    max-height: 500px;
+    overflow: auto;
+    border-bottom: 1px solid $grey;
+
+    .cart-item {
+      padding: 1rem;
+    }
+  }
+
+  &__action {
+    padding: 1rem;
+    text-align: center;
+  }
+}
