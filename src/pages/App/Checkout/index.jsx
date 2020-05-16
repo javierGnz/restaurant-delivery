@@ -1,13 +1,13 @@
 import React from "react";
-import Select from "react-select";
-import { Form } from "react-bootstrap";
 import { MdHealing } from "react-icons/md";
 import Product from "../../../components/Product";
-import PersonalInformation from "./PersonalInformation";
 import CartItem from "../../../components/CartItem";
 import Summary from "../../../components/Summary";
-import "./styles.scss";
 import MessageCard from "../../../components/MessageCard";
+import PersonalInformation from "./PersonalInformation";
+import Delivery from './Delivery';
+import Payment from './Payment';
+import "./styles.scss";
 
 const data = [
   {
@@ -68,7 +68,11 @@ const Checkout = () => {
             <h1 className="wrapper__title wrapper__title--underline">
               Entrega
             </h1>
-            <Select options={options} />
+            <Delivery />
+            <h1 className="wrapper__title wrapper__title--underline">
+              Pago
+            </h1>
+            <Payment />
           </div>
           <div className="col-lg-5 col-md-6">
             <h1 className="wrapper__title wrapper__title--underline">

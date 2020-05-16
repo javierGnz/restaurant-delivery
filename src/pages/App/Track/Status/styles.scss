@@ -1,0 +1,33 @@
+@import "../../../../assets/scss/variables";
+
+.status {
+  margin-bottom: 1rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: rgba($black, 0.5);
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__step {
+    border: 1px solid rgba($black, 0.5);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+  }
+
+  &__description {
+    h4 {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
