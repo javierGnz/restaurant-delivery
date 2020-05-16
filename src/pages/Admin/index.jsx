@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Layout from './Layout';
+import Layout from "./Layout";
 
 const Home = () => {
   return (
-    <div>hola</div>
+    <div>
+      Main content
+    </div>
   );
-}
+};
 
 const Admin = () => {
   return (
@@ -15,7 +17,7 @@ const Admin = () => {
         <Route exact path="/" component={Home} />
       </Switch>
     </Layout>
-  )
-}
+  );
+};
 
-export default Admin
+export default Admin;

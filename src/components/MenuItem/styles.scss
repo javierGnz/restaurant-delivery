@@ -1,0 +1,37 @@
+@import "../../assets/scss/variables";
+
+.menu-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+
+  &:first-child {
+    padding-top: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    color: rgba($black, 0.5);
+
+    &:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}

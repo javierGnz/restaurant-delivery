@@ -1,0 +1,70 @@
+@import "../../../../assets/scss/variables";
+
+.sidebar-menu {
+  background-color: $white;
+  border-right: 1px solid $grey;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    max-width: 200px;
+  }
+
+  &__toggle {
+    padding: 1rem;
+    border-bottom: 1px solid $grey;
+
+    .btn {
+      line-height: 1;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    display: none;
+    flex-direction: column;
+    overflow: auto;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    padding: 1.5rem;
+    border-bottom: 1px solid $grey;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    img {
+      @media (max-width: 767px) {
+        max-height: 75px;
+      }
+    }
+  }
+
+  &__list {
+    overflow: auto;
+    height: 100%;
+  }
+
+  &--responsive {
+    height: 100vh;
+  }
+}

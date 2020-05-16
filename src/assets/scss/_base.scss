@@ -4,6 +4,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  display: flex;
+  height: 100vh;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
 a, .btn {
   transition: all 0.45s cubic-bezier(0.33, 1, 0.68, 1);
 }

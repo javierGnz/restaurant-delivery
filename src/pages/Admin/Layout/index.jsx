@@ -1,13 +1,15 @@
 import React from "react";
+import SidebarMenu from "./SidebarMenu";
+import "./styles.scss";
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <nav className="navbar navbar-light bg-light">
-        <span className="navbar-brand mb-0 h1">Navbar</span>
-      </nav>
-      {children}
-    </>
+    <main>
+      <SidebarMenu />
+      <div className="main-wrapper">
+        {children}
+      </div>
+    </main>
   );
 };
 
